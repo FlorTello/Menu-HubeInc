@@ -1,0 +1,62 @@
+body, html {
+  padding: 0;
+  margin: 0;
+  font-family: 'Veradna',fantasy "sans-serif";
+}
+/*Direct Style for nav tag*/
+nav {
+  top : 0;
+  left: 0;
+  width: 100%;
+  color: #fff000;
+  height: 80px;
+  z-index: 1000;
+  margin-top: 0;
+  position: fixed;
+  padding-top: 0px;
+  background: none;
+  transition: all 0.65 cubic-bezier(0.7, 0.01, 0.3, 1);
+}
+
+.menu{
+  position: absolute;
+  z-index: 2000;
+}
+/*Hamburger*/
+a .menu{
+  top:0;
+  right:0;
+  height: 4px;
+  width: 24px;
+  text-align:right;
+  margin: 2rem 2rem;
+  background: #f7b617;
+  transition: all 0.3s;
+}
+.menu:before{
+  top: -8px;
+}
+.menu:after{
+  top: 8px;
+}
+#toggle:hover .menu:before {
+  top: -9px;
+}
+#toggle:hover .menu:after {
+  top: 9px;
+}
+.menu:before,
+.menu:after{
+  content: '';
+  width: 24px;
+  height: 4px;
+  z-index: -1;
+  display: block;
+  position: absolute;
+  background: #f7b617;
+  transition: all 0.3s;
+}
+#toggle:hover {
+  transition: top 0.4s;
+}
+/*END HAMBURGUER*/
