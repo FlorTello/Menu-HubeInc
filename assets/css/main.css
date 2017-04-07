@@ -7,6 +7,7 @@ body, html {
 
 main{
   margin-top: 100px;
+  line-height: 0;
 }
 main li {
   list-style: none;
@@ -34,7 +35,8 @@ figure {
 .box span{
     position: absolute;
     text-align: center;
-    padding: 20% auto;
+    padding: 10% auto;
+    color: white;
 }
 .box:hover .center {
     text-align: center;
@@ -42,7 +44,7 @@ figure {
     top: -63%;
     left: -25%;
     color: white;
-    font-size: 3rem;
+    font-size: 1.5rem;
 }
 .header-in{
   background-color: rgba(247, 182, 23, 0.81);
