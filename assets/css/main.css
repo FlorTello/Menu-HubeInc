@@ -1,14 +1,64 @@
 body, html {
   padding: 0;
   margin: 0;
-  font-family: 'Veradna',fantasy "sans-serif";
+  font-family: 'Raleway','fantasy',"sans-serif";
+  box-sizing: border-box;
+}
+
+main{
+  margin-top: 100px;
+}
+main li {
+  list-style: none;
+  display: inline-block;
+}
+li.box{
+  width: 400px;
+  height: 400px;
+}
+li.box img,.grid,figure{
+  width: 100%;
+  height: 100%;
+  display: inline-block;
+  box-sizing: border-box;
+}
+figure {
+  margin: 0;
+}
+.grid{
+  background-color:rgba(247, 182, 23, 0.81);
+}
+.box:hover img{
+    opacity: 0.5;
+}
+.box span{
+    position: absolute;
+    text-align: center;
+    padding: 20% auto;
+}
+.box:hover .center {
+    text-align: center;
+    position: relative;
+    top: -63%;
+    left: -25%;
+    color: white;
+    font-size: 3rem;
+}
+.header-in{
+  background-color: rgba(247, 182, 23, 0.81);
+}
+/*nav.solid #logo .logo {
+  background-image: url(../img/laboratoria.svg);
+}*/
+.logoopen #logo{
+  background-image: url(../img/laboratoria.svg);
 }
 /*Direct Style for nav tag*/
 nav {
   top : 0;
   left: 0;
   width: 100%;
-  color: #fff000;
+  color: #fff;
   height: 80px;
   z-index: 1000;
   margin-top: 0;
@@ -17,20 +67,102 @@ nav {
   background: none;
   transition: all 0.65 cubic-bezier(0.7, 0.01, 0.3, 1);
 }
+nav .nav-background {
+
+  top: 0px;
+  opacity:0;
+  width: 100%;
+  height: 100%;
+  z-index: 1500;
+  display: table;
+  background: none;
+  position: absolute;
+  transition: background-color 0.6s cubic-bezier(0.7, 0.01, 0.3, 1);
+}
+nav.open .nav-background {
+  opacity: 1;
+  background-color: #182F36 !important;
+  transition: background-color 0.6s cubic-bezier(0.7, 0.01, 0.3, 1);
+}
+nav.open {
+  height: 100%;
+  transition: none;
+  -o-transition: none;
+  -moz-transition: none;
+  -webkit-transition: none;
+}
+nav ul {
+  top: -10%;
+  padding: 0;
+  opacity: 0;
+  width: 100%;
+  text-align: center;
+  visibility: hidden;
+  display: table-cell;
+  vertical-align: middle;
+  transform: perspective(600px) rotateX(10deg);
+  transition: all 0.5s cubic-bezier(0.7, 0, 0.36, 0.63);
+}
+nav ul li{
+  visibility: hidden;
+}
+nav ul li a {
+  color:white;
+  width: 100%;
+  display: block;
+  padding: 8px 0 0;
+  letter-spacing: -0.06em;
+  text-decoration:none;
+}
+nav ul li a:hover{
+  color:#182F36;
+  background-color: #9C395C;
+}
+nav.open ul {
+  top: 0;
+  opacity: 1;
+  margin-top: 0;
+  visibility: visible;
+  transform: perspective(600px) rotateX(0deg);
+}
+nav.open ul li {
+  color:#fff;
+  font-size: 60px;
+  visibility: visible !important;
+}
+/*Menu bar logo and menu styles general*/
+.logo,
+.menu{
+  position: absolute;
+  z-index: 2000;
+}
+
+.logo{
+  left: 0;
+  top: -4px;
+  width: 70px;
+  height: 74px;
+  padding: 0.4% 5%;
+  text-align: left;
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+  background-image: url(../img/logo.svg);
+}
+
 
 .menu{
   position: absolute;
   z-index: 2000;
 }
 /*Hamburger*/
-a .menu{
+a.menu{
   top:0;
   right:0;
   height: 4px;
   width: 24px;
   text-align:right;
   margin: 2rem 2rem;
-  background: #f7b617;
+  background: #9C395C;
   transition: all 0.3s;
 }
 .menu:before{
@@ -39,10 +171,10 @@ a .menu{
 .menu:after{
   top: 8px;
 }
-#toggle:hover .menu:before {
+#toggle:hover:before {
   top: -9px;
 }
-#toggle:hover .menu:after {
+#toggle:hover:after {
   top: 9px;
 }
 .menu:before,
@@ -53,10 +185,23 @@ a .menu{
   z-index: -1;
   display: block;
   position: absolute;
-  background: #f7b617;
+  background: #9C395C;
   transition: all 0.3s;
 }
 #toggle:hover {
   transition: top 0.4s;
 }
 /*END HAMBURGUER*/
+.open .menu{
+  background: none !important;
+}
+.open .menu:after{
+  top: 0 !important;
+  background: #fff !important;
+  transform: rotate(45deg);
+}
+.open .menu:before{
+  top: 0 !important;
+  background: #fff !important;
+  transform: rotate(-45deg);
+}
