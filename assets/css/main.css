@@ -5,8 +5,37 @@ body, html {
   box-sizing: border-box;
 }
 
+.info{
+  width: 100%;
+	height: 300px;
+  padding-top: 300px;
+  margin: auto;
+  text-align: center;
+  display: flex;
+  background-color: #182F36 ;
+}
+.text-info{
+  color: white;
+	background: #182F36;
+	text-align: center;
+  display: table;
+}
+.text-info h1{
+  font-size: 30px;
+   overflow: hidden;
+   border-right: .20em solid orange; /*ancho del cursor*/
+   white-space: nowrap;
+   margin: 0 auto;
+   letter-spacing: .15em;
+   animation:   write 5s steps(50)infinite alternate;
+}
+
+@keyframes write{
+	from{width: 0%}
+	to{width: 100%}
+}
 main{
-  margin-top: 100px;
+  margin-top: 10px;
   line-height: 0;
 }
 main li {
@@ -22,26 +51,33 @@ li.box img,.grid,figure{
   height: 100%;
   display: inline-block;
   box-sizing: border-box;
+  overflow: hidden;
 }
 figure {
   margin: 0;
 }
 .grid{
-  background-color:rgba(247, 182, 23, 0.81);
+  background-color:rgba(247, 182, 23, 5);
 }
 .box:hover img{
-    opacity: 0.5;
+    opacity: 0.3;
+    transform: scale(1.2);
+    -webkit-transform:scale(1.2);
+    -moz-transform:scale(1.2);
+    -ms-transform:scale(1.2);
+    -o-transform:scale(1.2);
 }
 .box span{
     position: absolute;
     text-align: center;
     padding: 10% auto;
     color: white;
+    top: -10%;
 }
 .box:hover .center {
     text-align: center;
     position: relative;
-    top: -63%;
+    top: -53%;
     left: -25%;
     color: white;
     font-size: 1.5rem;
@@ -66,7 +102,7 @@ nav {
   margin-top: 0;
   position: fixed;
   padding-top: 0px;
-  background: none;
+  background: #616161;
   transition: all 0.65 cubic-bezier(0.7, 0.01, 0.3, 1);
 }
 nav .nav-background {
@@ -109,7 +145,7 @@ nav ul li{
   visibility: hidden;
 }
 nav ul li a {
-  color:white;
+  color:#616161;
   width: 100%;
   display: block;
   padding: 8px 0 0;
@@ -144,7 +180,7 @@ nav.open ul li {
   top: -4px;
   width: 70px;
   height: 74px;
-  padding: 0.4% 5%;
+  padding: 0.4% 10%;
   text-align: left;
   background-position: 50% 50%;
   background-repeat: no-repeat;

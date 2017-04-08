@@ -29,18 +29,20 @@ window.addEventListener("scroll", function(){
 window.addEventListener('load',function(e){
   e.preventDefault();
   var dfm = document.createDocumentFragment();
-  var nameCoders = ['','Marilu Llamocca','Maria  Vilchez','Glisse Lisbeth','Ana Durand ','Ruth Abigail ',
-                    'Leslie Avendaño','Flor Tello','Miriam Peralta','Fiorella Quispe ','Annia Flores ',
-                    'Leidy Maldonado','Rosario Felix T','Liliana Peña','Miriam Mendoza ',
-                    'Flor Condori','Naomi Villanueva','Luz Gutierrez','Karin Alejo',
-                    'Michelle More','Fiorella Cisneros','Betsi Loayza','Mariel Lara',
-                    'Ruth Silva','Erika Vidal','Angie Condor','Stephanie Hiyagon',
-                    'Grecia Rayme','Cindy Mendoza ','Mitchell Rodríguez','Maria Grecia Cutipa',
-                    'Geraldine Chauca','Mary Castillo','Nadia Cuadros','Elizabeth Condori','Rocio Emma Tapia',
-                    'Neiza Luz Nuñez','ARANTZA BURGA','Schelsen Majuan','Sandra Solorzano','Yelitza Choque',
-                    'Katherine Ortega','Maricarmen Rojas','Ariana Cabana','Nathaly Pacheco',
-                    'Janine Vega','WENDY  REYES ','Milagros Gonzales','Jenny Velasquez',
-                    'Dana Franco ','Maria Jave','AYDA Sulca ','Magali Zambrano ','Flor Retamozo '];
+  var nameCoders = ['','Fiorella Cisneros','Lourdes Vilchez','Leydi Maldonado','Yessenia Huamán',
+                    'Miriam Mendoza', 'Elizabeth Condori', 'Arantza Burga', 'Grecia Rayme',
+                    'Janine Vega', 'Rosario Félix', 'Daguiana Revolledo', 'Jenny Velasquez',
+                    'Nadia Cuadros', 'Michelle More', 'Marilu Llamoca', 'Mariel García',
+                    'Fiorella Cisneros', 'Geraldine Chauca', 'Yelitza Choque',
+                    'Stephanie Hiyagon', 'Rocio Tapia', 'Dana Franco', 'Flor Retamozo',
+                    'Nathaly Pacheco', 'Ericka Vidal', 'Katherine Ortega', 'Brilly Majuan',
+                    'Flor Tello', 'Leslie Avendaño', 'Cindy Mendoza', 'Annia Flores',
+                    'Betsi Loayza', 'Ayda Sulca', 'Milagros Gutierrez', 'Nakarid Jave',
+                    'Angie Condor', 'Maricarmen Rojas', 'Ariana Cabana', 'Flor Condori',
+                    'Mitchell Rodríguez', 'Naomi Villanueva', 'Mary Castillo', 'Miriam Peralta',
+                    'Karin Alejo', 'Liliana Peña', 'Ruth Salvador', 'Marilu Llamoca', 'Wendy Reyes',
+                    'Cinthya Quispe','Maria Grecia Cutipa', 'Ana Durand', 'Glisse Jorge', 'Neiza Nuñez',
+                    'Sandra Solorzano'];
   for (var i = 1; i < nameCoders.length; i++) {
     dfm.appendChild(crearIMG('assets/img/students/'+i+'.png',nameCoders[i]));
   }
