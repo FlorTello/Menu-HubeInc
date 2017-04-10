@@ -4,6 +4,17 @@ body, html {
   font-family: 'Raleway','fantasy',"sans-serif";
   box-sizing: border-box;
 }
+footer{
+  width: 100%;
+  height: 56px;
+  background-color: #182F36;
+  color: white;
+  text-align: center;
+  padding: 15px;
+}
+/*footer span{
+  color:
+}*/
 
 .info{
   width: 100%;
